@@ -25,7 +25,7 @@ export default function LoginPage() {
             
             if(!response.ok) {
                 setError(data.message || "Login gagal");
-                alert(data.message || "Login gagal");
+                // alert(data.message || "Login gagal");
                 return;
             }
             
@@ -35,37 +35,37 @@ export default function LoginPage() {
         catch (error) {
             setError("Login gagal");
             console.error('Error:', error);
-            alert('Login gagal');
+            // alert('Login gagal');
         }
     }
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900 px-4">
-            <div className="w-full max-w-md bg-white dark:bg-gray-800 shadow-lg rounded-xl p-8">
-                <h1 className="text-2xl font-semibold text-gray-800 dark:text-white mb-2">
+        <div className="flex items-center justify-center min-h-screen bg-gray-900 px-4">
+            <div className="w-full max-w-md bg-gray-800 shadow-lg rounded-xl p-8">
+                <h1 className="text-2xl font-semibold text-white mb-2">
                     Login
                 </h1>
 
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
+                <p className="text-sm text-gray-400 mb-6">
                     Masukkan username dan password
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-5">
                 {/* Username */}
                 <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    <label className="block text-sm font-medium text-gray-300 mb-1">
                         UserID
                     </label>
                     <input type="text" value={id_user} 
                         onChange={
                             (e) => setIDUser(e.target.value)
                         } 
-                        placeholder="Masukkan username" className="w-full px-4 py-2 border rounded-lg text-sm border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white" required/>
+                        placeholder="Masukkan username" className="w-full px-4 py-2 border rounded-lg text-sm border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none bg-gray-700 border-gray-600 text-white" required/>
                 </div>
 
                 {/* Password */}
                 <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    <label className="block text-sm font-medium text-gray-300 mb-1">
                         Password
                     </label>
 
@@ -74,7 +74,7 @@ export default function LoginPage() {
                         onChange={
                             (e) => setPassword(e.target.value)
                         }
-                        placeholder="Masukkan password" className="w-full px-4 py-2 border rounded-lg text-sm border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white" required/>
+                        placeholder="Masukkan password" className="w-full px-4 py-2 border rounded-lg text-sm border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none bg-gray-700 border-gray-600 text-white" required/>
 
                     {/* ICON INLINE */}
                     <span
