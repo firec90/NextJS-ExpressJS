@@ -60,7 +60,7 @@ export default function LoginPage() {
                         onChange={
                             (e) => setIDUser(e.target.value)
                         } 
-                        placeholder="Masukkan username" className="w-full px-4 py-2 border rounded-lg text-sm border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none bg-gray-700 border-gray-600 text-white" required/>
+                        placeholder="Masukkan username" className="w-full px-4 py-2 border rounded-lg text-sm border-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none bg-gray-700 text-white" required/>
                 </div>
 
                 {/* Password */}
@@ -74,7 +74,7 @@ export default function LoginPage() {
                         onChange={
                             (e) => setPassword(e.target.value)
                         }
-                        placeholder="Masukkan password" className="w-full px-4 py-2 border rounded-lg text-sm border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none bg-gray-700 border-gray-600 text-white" required/>
+                        placeholder="Masukkan password" className="w-full px-4 py-2 border rounded-lg text-sm border-gray-600 focus:ring-2 focus:ring-blue-500 focus:outline-none bg-gray-700 text-white" required/>
 
                     {/* ICON INLINE */}
                     <span
@@ -109,7 +109,7 @@ export default function LoginPage() {
                 </div>
 
                 {error && (
-                    <p className="text-sm text-red-500">{error}</p>
+                    <p className="text-sm text-red-500 text-center">{error}</p>
                 )}
 
                 <button
